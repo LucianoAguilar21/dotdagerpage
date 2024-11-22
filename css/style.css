@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face{
@@ -14,6 +15,7 @@
 .nav{
     height: 120px;
     display: flex;
+    flex-wrap: wrap; 
     background-color: rgba(22, 22, 22, 0.658);
     justify-content: space-around;
     font-family: 'pickle';
@@ -60,12 +62,12 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-image: url("../img/FiverrPack/Sequence\ 01_1732155527429.jpg"); 
-    background-size: cover;
-    background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evitar scroll horizontal en móviles */
+  background-image: url("../img/FiverrPack/Sequence\ 01_1732155527429.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
   
   /* Contenedor de la lluvia */
@@ -95,8 +97,9 @@ body {
     }
 }
 
-.container{
-    width: 100vw;
+.container {
+  width: 100%;
+  padding: 20px;
 }
 
 .info{
@@ -158,4 +161,198 @@ body {
 .img-contact{
   width: 300px;
   border-style: groove;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (min-width: 768px) {
+
+
+
+  .nav {
+      flex-direction: column;
+      height: auto;
+  }
+
+  .nav ul {
+      flex-direction: column; /* Los elementos del menú en columna */
+      align-items: center;
+      gap: 10px;
+  }
+
+  .nav img {
+      height: 60px; /* Tamaño reducido */
+  }
+
+
+  .container{
+    width: 100%;
+  }
+  .info {
+    width: 100%;
+      flex-direction: column; /* Contenido en columna */
+  }
+
+  .content {
+      width: 100%; /* Usar todo el ancho disponible */
+      padding: 15px;
+  }
+
+  .interest {
+      margin: 5px 0; /* Espaciado reducido */
+  }
+
+  #background {
+      display: none; /* Ocultar elementos decorativos si no son necesarios */
+  }
+   /* Contenedor de la lluvia */
+#background {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Queda en el fondo */
+}
+
+/* Estilo para cada "gota" */
+.drop {
+  position: absolute;
+  width: 50px; /* Tamaño del pepino */
+  animation: fall linear infinite;
+}
+
+/* Animación de caída */
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+}
+
+@media (min-width: 480px) {
+
+ 
+
+  /* Contenedor de la lluvia */
+
+      .drop {
+        width: 20px; /* Reducir el tamaño de las gotas en pantallas pequeñas */
+    }
+  .nav img {
+      height: 50px; /* Más pequeño en pantallas muy pequeñas */
+  }
+
+  .nav ul {
+      gap: 8px; /* Reducir el espacio entre elementos */
+  }
+
+  .container{
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    font-size: 9px; /* Fuente más pequeña para ajustarse */
+   
+  }
+
+
+
+   /* Contenedor de la lluvia */
+#background {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Queda en el fondo */
+}
+
+/* Estilo para cada "gota" */
+.drop {
+  position: absolute;
+  width: 50px; /* Tamaño del pepino */
+  animation: fall linear infinite;
+}
+
+/* Animación de caída */
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+}
+
+@media (max-width: 480px) {
+
+ 
+
+  /* Contenedor de la lluvia */
+
+      .drop {
+        width: 20px; /* Reducir el tamaño de las gotas en pantallas pequeñas */
+    }
+  .nav img {
+      height: 50px; /* Más pequeño en pantallas muy pequeñas */
+  }
+
+  .nav ul {
+      gap: 8px; /* Reducir el espacio entre elementos */
+  }
+
+  #about{
+    font-size: 20px;
+  }
+
+  .img-contact{
+    width: 200px;
+  }
+
+  .container{
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    font-size: 9px; /* Fuente más pequeña para ajustarse */
+   
+  }
+
+
+
+   /* Contenedor de la lluvia */
+#background {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Queda en el fondo */
+}
+
+/* Estilo para cada "gota" */
+.drop {
+  position: absolute;
+  width: 50px; /* Tamaño del pepino */
+  animation: fall linear infinite;
+}
+
+/* Animación de caída */
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
 }
