@@ -13,52 +13,51 @@
 
 
 .nav{
-    height: 120px;
-    display: flex;
-    flex-wrap: wrap; 
-    background-color: rgba(22, 22, 22, 0.658);
-    justify-content: space-around;
-    font-family: 'pickle';
-    font-size: 18px;
+  height: 120px;
+  display: flex;
+  background-color: rgba(22, 22, 22, 0.658);
+  justify-content: space-around;
+  font-family: 'pickle';
+  font-size: 18px;
 }
 
 .nav ul{
-    color:white;
-    list-style: none;
-    display: flex;
-    align-items: center;
+  color:white;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 .nav ul li{
-    padding: 8px;
+  padding: 8px;
 }
 .nav ul li a{
-  text-decoration: none;
-  color: white;
+text-decoration: none;
+color: white;
 }
 
 .nav ul li a:hover{
-  cursor: pointer;
-  filter: drop-shadow(10px 10px 10px rgb(6, 91, 11));
+cursor: pointer;
+filter: drop-shadow(10px 10px 10px rgb(6, 91, 11));
 }
 
 
 
 .nav img{
-    position: relative;
-    height: 150px;
-    top: -15px;
-    filter: drop-shadow(10px 10px 10px rgba(4, 72, 9, 0.352));
+  position: relative;
+  height: 150px;
+  top: -15px;
+  filter: drop-shadow(10px 10px 10px rgba(4, 72, 9, 0.352));
 }
 
 .nav img:hover{
-    filter: drop-shadow(10px 10px 10px rgb(6, 91, 11));
+  filter: drop-shadow(10px 10px 10px rgb(6, 91, 11));
 }
 
 .img-div{
-    align-items: center;
-    margin: 0;
-    padding-bottom: 10px;
+  align-items: center;
+  margin: 0;
+  padding-bottom: 10px;
 }
 
 body {
@@ -163,205 +162,47 @@ body {
   border-style: groove;
 }
 
-/* Media queries para pantallas pequeñas */
-@media (min-width: 768px) {
 
 
 
-  .nav {
-      flex-direction: column;
-      height: auto;
+@media (max-width: 768px){
+  .nav{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    gap: -5px;
   }
 
-  .nav ul {
-      flex-direction: column; /* Los elementos del menú en columna */
-      align-items: center;
-      gap: 10px;
+  .nav ul li a{
+    font-size: 14px;
   }
 
-  .nav img {
-      height: 60px; /* Tamaño reducido */
+  .img-div img{
+    height: 70px;
   }
 
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/FiverrPack/Sequence 01_1732155527429.jpg");
+    background-size: cover; /* La imagen se escala para cubrir toda el área */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
 
-  .container{
-    width: 100%;
-  }
-  .info {
-    width: 100%;
-      flex-direction: column; /* Contenido en columna */
-  }
-
-  .content {
-      width: 100%; /* Usar todo el ancho disponible */
-      padding: 15px;
-  }
-
-  .interest {
-      margin: 5px 0; /* Espaciado reducido */
-  }
-
-  #background {
-      display: none; /* Ocultar elementos decorativos si no son necesarios */
-  }
-   /* Contenedor de la lluvia */
-#background {
-  position: absolute;
-  top: -50px;
-  left: 0;
+.container{
   width: 100%;
-  height: 100%;
-  z-index: -1; /* Queda en el fondo */
 }
 
-/* Estilo para cada "gota" */
-.drop {
-  position: absolute;
-  width: 50px; /* Tamaño del pepino */
-  animation: fall linear infinite;
-}
-
-/* Animación de caída */
-@keyframes fall {
-  0% {
-    transform: translateY(-100px) rotate(0deg);
-  }
-  100% {
-    transform: translateY(110vh) rotate(360deg);
-  }
-}
-
-}
-
-@media (min-width: 480px) {
-
- 
-
-  /* Contenedor de la lluvia */
-
-      .drop {
-        width: 20px; /* Reducir el tamaño de las gotas en pantallas pequeñas */
-    }
-  .nav img {
-      height: 50px; /* Más pequeño en pantallas muy pequeñas */
-  }
-
-  .nav ul {
-      gap: 8px; /* Reducir el espacio entre elementos */
-  }
-
-  .container{
-    width: 100%;
-  }
-
-  .content {
-    width: 100%;
-    font-size: 9px; /* Fuente más pequeña para ajustarse */
-   
-  }
-
-
-
-   /* Contenedor de la lluvia */
-#background {
-  position: absolute;
-  top: -50px;
-  left: 0;
+.content{
   width: 100%;
-  height: 100%;
-  z-index: -1; /* Queda en el fondo */
 }
 
-/* Estilo para cada "gota" */
-.drop {
-  position: absolute;
-  width: 50px; /* Tamaño del pepino */
-  animation: fall linear infinite;
+#about{
+  font-size: 20px;
 }
 
-/* Animación de caída */
-@keyframes fall {
-  0% {
-    transform: translateY(-100px) rotate(0deg);
-  }
-  100% {
-    transform: translateY(110vh) rotate(360deg);
-  }
-}
-
-}
-
-@media (max-width: 480px) {
-
- 
-
-  /* Contenedor de la lluvia */
-
-      .drop {
-        width: 20px; /* Reducir el tamaño de las gotas en pantallas pequeñas */
-    }
-  .nav img {
-      height: 50px; /* Más pequeño en pantallas muy pequeñas */
-  }
-
-  .nav ul {
-      gap: 8px; /* Reducir el espacio entre elementos */
-  }
-
-  #about{
-    font-size: 20px;
-  }
-
-  .img-contact{
-    width: 200px;
-  }
-
-  .container{
-    width: 100%;
-  }
-
-  .content {
-    width: 100%;
-    font-size: 9px; /* Fuente más pequeña para ajustarse */
-   
-  }
-
-
-
-   /* Contenedor de la lluvia */
-#background {
-  position: absolute;
-  top: -50px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Queda en el fondo */
-}
-
-/* Estilo para cada "gota" */
-.drop {
-  position: absolute;
-  width: 50px; /* Tamaño del pepino */
-  animation: fall linear infinite;
-}
-
-/* Animación de caída */
-@keyframes fall {
-  0% {
-    transform: translateY(-100px) rotate(0deg);
-  }
-  100% {
-    transform: translateY(110vh) rotate(360deg);
-  }
-}
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Evitar scroll horizontal en móviles */
-  background-image: url("../img/FiverrPack/Sequence\ 01_1732155527429.jpg");
-  background-size: cover; /* La imagen se escala para cubrir toda el área */
-  background-position: center; /* Centra la imagen en la pantalla */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-
+.img-contact{
+  width: 200px;
 }
 }
