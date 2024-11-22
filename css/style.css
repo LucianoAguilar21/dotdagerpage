@@ -354,5 +354,14 @@ body {
     transform: translateY(110vh) rotate(360deg);
   }
 }
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evitar scroll horizontal en móviles */
+  background-image: url("../img/FiverrPack/Sequence\ 01_1732155527429.jpg");
+  background-size: cover; /* La imagen se escala para cubrir toda el área */
+  background-position: center; /* Centra la imagen en la pantalla */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
 
+}
 }
